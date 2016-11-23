@@ -22,7 +22,8 @@ if(CModule::IncludeModule('iblock')) {
     $links = array();
     $mds = array();
     $arFields['NAME'] = html_entity_decode($ro->NAME);
-    $arFields['DETAIL_TEXT'] = $ro->DESCRIPTION." Номер в базе: ".$ro->ID;
+    $arFields['DETAIL_TEXT'] = htmlspecialchars_decode($ro->DESCRIPTION);
+    $arFields['DETAIL_TEXT_TYPE'] = 'html';
     $arFields['CODE'] = $ro->ID;
     $prop[78] = $ro->REGION;
     $prop[80] = $ro->DISTRICT;
