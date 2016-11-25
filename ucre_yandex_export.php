@@ -71,7 +71,7 @@ $dom = new domDocument("1.0", "utf-8"); // Создаём XML-документ �
         $url = $dom->createElement("url",$link.$arFields['ID']);
         $offer->appendChild($url);
         
-        $creation_date = $dom->createElement("creation-date",date("c", strtotime($arFields['DATE_ACTIVE_FROM'])));
+        $creation_date = $dom->createElement("creation-date",date("c"/*, strtotime($arFields['DATE_ACTIVE_FROM'])*/));
         $offer->appendChild($creation_date);
         
         $location = $dom->createElement("location");
