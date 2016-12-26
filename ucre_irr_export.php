@@ -211,6 +211,7 @@ if(CModule::IncludeModule('iblock')) {
     
     $price = $dom->createElement("price");
     $price->setAttribute("value",intval($arProps['PRICE']['VALUE']));
+    if (!intval($arProps['PRICE']['VALUE'])) echo "Без цены http://ucre.ru/catalog/".$ar_res['CODE']."/".$arFields['ID']."/<br>";
     $price->setAttribute("currency","RUR");
     $store_ad->appendChild($price);
     $title = $dom->createElement("title",$arFields['NAME']);
