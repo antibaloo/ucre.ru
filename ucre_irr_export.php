@@ -33,7 +33,7 @@ if(CModule::IncludeModule('iblock')) {
       continue;
     }
     $store_ad = $dom->createElement("store-ad");
-    $store_ad->setAttribute("validtill",date("c",strtotime("+30 days")));
+    $store_ad->setAttribute("validtill",date("c",strtotime("+2 days")));
     $store_ad->setAttribute("power-ad","1");
     $store_ad->setAttribute("source-id",$arFields['ID']);
     switch ($arFields['IBLOCK_SECTION_ID']){
@@ -87,6 +87,10 @@ if(CModule::IncludeModule('iblock')) {
         }
         if ($name[0]=="Магазин"){
           $store_ad->setAttribute("category",($arProps['TYPE']['VALUE']=='Продажа')?"/real-estate/commercial-sale/retail":"/real-estate/commercial/retail");
+          $store_ad->setAttribute("advertype",($arProps['TYPE']['VALUE']=='Продажа')?"realty_trading":"realty_trading_rent");
+        }
+        if ($name[0]=="Гараж"){
+          $store_ad->setAttribute("category",($arProps['TYPE']['VALUE']=='Продажа')?"/real-estate/garage/stall":"/real-estate/garage-rent/stall");
           $store_ad->setAttribute("advertype",($arProps['TYPE']['VALUE']=='Продажа')?"realty_trading":"realty_trading_rent");
         }
         break;
@@ -192,7 +196,11 @@ if(CModule::IncludeModule('iblock')) {
       $email = $dom->createElement("field",$stProps['EMAIL']['VALUE']);
       $email->setAttribute("name","email");
       $custom_fields->appendChild($email);
-      $phone = $dom->createElement("field",$stProps['PHONE']['VALUE']);
+      $phone = str_replace(" ","",$stProps['PHONE']['VALUE']);
+      $phone = str_replace("(","",$phone);
+      $phone = str_replace(")","",$phone);
+      $phone = str_replace("-","",$phone);
+      $phone = $dom->createElement("field",$phone);
       $phone->setAttribute("name","phone");
       $custom_fields->appendChild($phone);
     }
