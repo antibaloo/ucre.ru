@@ -14,6 +14,7 @@ $error_add = 0;
 $error_update = 0;
 if(CModule::IncludeModule('iblock')) {
   //Перед загрузкой деактивируем все активные объекты на сайте
+  $arSelect = Array("ID", "IBLOCK_ID", "CODE", "ACTIVE");//Забыл
   $iblock_filter = array ("IBLOCK_ID" => 14, "ACTIVE" => "Y", "!CODE"=>false);//Объекты для деактивации на сайте, наличие значение в поле CODE говорит о том, что объект загружен , а не создан непосредственно
   $db_res = CIBlockElement::GetList(array("CODE"=>"ASC"), $iblock_filter, false, false, $arSelect);
   while($aRes = $db_res->GetNext()){
