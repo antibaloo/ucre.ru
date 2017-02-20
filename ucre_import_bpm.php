@@ -13,6 +13,17 @@ $new =0;
 $error_add = 0;
 $error_update = 0;
 if(CModule::IncludeModule('iblock')) {
+  //Перед загрузкой деактивируем все активные объекты на сайте
+  $iblock_filter = array ("IBLOCK_ID" => 14, "ACTIVE" => "Y", "!CODE"=>false);//Объекты для деактивации на сайте, наличие значение в поле CODE говорит о том, что объект загружен , а не создан непосредственно
+  $db_res = CIBlockElement::GetList(array("CODE"=>"ASC"), $iblock_filter, false, false, $arSelect);
+  while($aRes = $db_res->GetNext()){
+    $el = new CIBlockElement;
+    $arFields = array(
+      "ACTIVE" => "N",
+    );
+    $el->Update($aRes['ID'], $arFields);
+  }
+  
   $objects = json_decode(file_get_contents('https://bpm.ucre.ru/ro.json'));//Получаем вектор активных объектов портала
   foreach ($objects as $ro){
     $arFields = array();
