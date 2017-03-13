@@ -182,7 +182,20 @@ if(CModule::IncludeModule('iblock')) {
       $custom_fields->appendChild($land);
     }
     
+    
     /*Поиск данных риелтора*/
+    /* с 13.03.2017 все объявления выгружаются под общми контактными данными
+    */
+    $contact = $dom->createElement("field","Единый Центр Недвижимости");
+    $contact->setAttribute("name","contact");
+    $custom_fields->appendChild($contact);
+    $email = $dom->createElement("field","info@ucre.ru");
+    $email->setAttribute("name","email");
+    $custom_fields->appendChild($email);
+    $phone = $dom->createElement("field","+7(3532)690-157, +7(932)536-01-57");
+    $phone->setAttribute("name","phone");
+    $custom_fields->appendChild($phone);
+    /*
     $stSort= Array("ID"=>"ASC");
     $stSelect = Array("ID","IBLOCK_ID", "NAME", "PROPERTY_*");
     $stFilter = Array("IBLOCK_ID" => 13, "ACTIVE"=>"Y", "ID"=>$arProps['STAFF']['VALUE']);
@@ -203,7 +216,7 @@ if(CModule::IncludeModule('iblock')) {
       $phone = $dom->createElement("field",$phone);
       $phone->setAttribute("name","phone");
       $custom_fields->appendChild($phone);
-    }
+    }*/
     /*----------------------*/
     $res = CIBlockSection::GetByID($arFields['IBLOCK_SECTION_ID']);
     if($ar_res = $res->GetNext()){
