@@ -191,7 +191,26 @@ $arItem = $arResult;
     				h.appendChild(s);
   			}})();</script>
 <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=08" data-services="facebook,vkontakte,odnoklassniki,twitter,google,moimir"></div>
-        <?}?>
+        <?}else{?>
+        <div class="sotr-mini">
+            <h2>Ответственный сотрудник</h2>
+            <div class="cart-min">
+                <a href="#" class="img">
+									<img src="<?=SITE_TEMPLATE_PATH?>/assets/images/stub-staff.jpg">
+                </a>
+                <div class="desc">
+                    <div class="tb-wr">
+                        <div class="tb-row">
+                            <a href="#" class="title">Дежурный клиент менеджер</a>
+                            <div class="ph">+7(922)829-90-57</div>
+                            <div class="sot-mail"><a href="mailto:info@ucre.ru">info@ucre.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+				
+				<?}?>
     </div>
 </div>
 <div class="new-big-block">
