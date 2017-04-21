@@ -1,0 +1,196 @@
+.top-head, .top-foot{
+	background:#f5bb00;
+}
+
+.top-b.time:after{
+	background: url(../images/time.png) no-repeat;
+    background-size: cover;
+}
+
+.top-b.phone:after{
+	background: url(../images/phone.png) no-repeat;
+    background-size: cover;
+}
+
+.top-b.addr:after{
+	background: url(../images/addr.png) no-repeat;
+    background-size: cover;
+}
+.top-b.addr:after, 
+.nw-map:hover:after, 
+.nw-map.active:after{
+	background: url(../images/o-mapn.png) no-repeat;
+    background-size: cover;
+}
+
+.nw-cred:hover:after, 
+.nw-cred.active:after{
+	background: url(../images/o-credh.png) no-repeat;
+    background-size: cover;
+}
+
+.nw-inf:hover:after, 
+.nw-inf.active:after{
+	background: url(../images/o-info.png) no-repeat;
+    background-size: cover;
+}
+.otl span{
+	background: url(../images/star-gold.png) no-repeat;
+    background-size: cover;
+}
+
+.as-icon:after{
+	background: url(../images/star-white.png) no-repeat;
+    background-size: cover;
+}
+
+.blocks:after{
+	background: url(../images/blocks.png) no-repeat;
+    background-size: cover;
+}
+
+.tables:after{
+	background: url(../images/tables.png) no-repeat;
+    background-size: cover;
+}
+
+.top-btn a:hover:after{
+	background: url(../images/sprite.png) -100px -50px no-repeat;
+}
+
+.layout a,
+.soc .right a:hover{
+	opacity:0.25;
+	background-position-y: -100px;
+}
+
+.layout a.active{
+	opacity:1;
+}
+
+.otl span{
+	opacity:0.25
+}
+
+.otl.gold span{
+	opacity:1;
+}
+
+.aside span{
+	color:white;
+}
+
+.big-title a:hover{
+	color:#425063;
+}
+
+.big-title a{
+	color: #ec9f05;
+}
+
+
+.button, .content .left a.button,
+.slider .button.destr:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:hover{
+	background:#ec9f05;
+	border: 2px solid #ec9f05;
+}
+
+.button:hover, 
+.content .left a.button:hover, 
+.slider .button.destr{
+	background:transparent;
+	color:#ec9f05;
+	border: 2px solid #ec9f05;
+}
+
+.content a.button.gr, .content .button.gr {
+    background: #BEC6D0;
+    border-color: #BEC6D0;
+}	
+	
+.content a.button.gr:hover, .content .button.gr:hover {
+	background: transparent;
+	border-color: #BEC6D0;
+	color: #BEC6D0;
+	
+}
+	
+.as-icon,
+footer,
+.content li:before,
+.about li:before,
+.right-menu>ul>li:hover>a:after, 
+.right-menu>ul>li.active>a:after, 
+.right-menu>ul>li.opened>a:after,
+.noUi-handle:after{
+	background:#ec9f05;
+}
+
+.usl-item:after,
+.sl .item .title span,
+.right-menu>ul>li>a>span,
+.breadcrumb li a,
+.content .cont-item a.title{
+	border-color: #ec9f05;
+}
+.t-nav>li:hover>a, 
+.t-nav>div>li:hover>a, 
+.as-desc:hover, 
+.t-nav>li>a.active,
+.left-menu a:hover, 
+.left-menu a .active{
+	opacity:0.6;
+	color:white!important;
+}
+
+.t-nav>li>ul>li>ul>li:hover, 
+.t-nav>li>ul>li:hover, 
+.t-nav ul a.active,
+.t-nav>li>ul>li>ul>li>a:hover, 
+.t-nav>div>li>ul>li>ul>li:hover, 
+.t-nav>div>li>ul>li:hover, 
+.t-nav>div>li>ul>li>ul>li>a:hover,
+.t-nav>li>ul>li>a:hover, 
+.t-nav>div>li>ul>li>a:hover,
+.slider .title span,
+.usl-item:hover .title,
+.bottom-head ul li a:hover,
+.sl .item .adr:hover,
+.nw-item .title a:hover,
+ul.breadcrumps li,
+h1,
+.content h2,
+.content h3,
+.content th,
+.bottom-head ul li a.active,
+a.sub-but,
+.content .new-big-thumbs a:hover, 
+.content .new-big-thumbs a.active,
+.filt-sum, 
+.filt-add,
+.f-sum, 
+.f-month,
+.orange,
+.about a,
+.alb-item:hover .middle div,
+.content .sot-item .title:hover, 
+.opened .alb-item .middle div,
+.content .cont-item a.title:hover{
+	color:#ec9f05!important;
+}
+
+.content  .left .new-big-thumbs a{
+	color: #425063;
+}
+
+.content .left a, 
+.about a{
+	color:#ec9f05;
+}
+
+.cr-wr .roub svg{
+	fill:#ec9f05;
+}
+

@@ -1,0 +1,39 @@
+.top-head, 
+.bottom-head.inner,
+footer, 
+.top-btn a,
+ul.breadcrumps,
+.breadcrumb,
+.tov-buttons,
+.content .right-card .otl,
+.new-big-thumbs,
+.slider-spec,
+.left>h3,
+.options,
+#panel,
+.print,
+.break{
+	display:none!important;
+}
+
+body{
+	min-width: 1026px;
+}
+
+.right-card .price{
+	margin: 0;
+}
+
+.new-data{
+	display:block;
+	margin: 0 0 20px;
+}
+
+header{
+	width: 1025px;
+    margin: 0 auto
+}
+
+#data2{
+	display:none;
+}

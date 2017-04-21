@@ -1,0 +1,190 @@
+/*html,body,address,blockquote,div,p,pre,h1,h2,h3,h4,h5,h6,hr,
+dd,dl,dt,ul,ol,li,
+a,abbr,acronym,b,big,br,cite,code,del,dfn,em,i,
+ins,kbd,q,samp,small,span,strong,sub,sup,tt,var, object,
+caption,table,tbody,td,tfoot,th,thead,tr,
+form, footer, nav, section, input,textarea,select,button,fieldset,legend,label,
+font,u,s,center,dir,menu,strike,xmp
+{
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-indent: 0;
+	text-decoration: none;
+	list-style-type: none;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+	font-family: 'Roboto', sans-serif;
+}*/
+
+.options{
+	position:fixed;
+	left:-163px;
+	top:42px;
+	width:163px;
+	z-index: 999999;
+	padding: 18px 0 36px;
+	border-radius: 0 3px 3px 0;
+	background:#787f89;
+	font-family: Verdana, sans-seriv;
+	-webkit-transition: left 0.080s ease-out;
+    -moz-transition: left 0.080s ease-out;
+    -o-transition: left 0.080s ease-out;
+    transition: left 0.080s ease-out;
+}
+.options.opened{
+	left:0;
+	position:absolute;
+}
+.options.opened.opfixed{
+	position:fixed;
+	top:42px;
+}
+.opt{
+	width:51px;
+	height:55px;
+	cursor:pointer;
+	position:absolute;
+	right: -51px;
+	top:0;
+	background: #787f89 url(../images/opt.png) 7px 10px no-repeat;
+	border-radius:0 50% 50% 0;
+	box-sizing:border-box;
+	
+	-webkit-transition: all 0.080s ease-out;
+    -moz-transition: all 0.080s ease-out;
+    -o-transition: all 0.080s ease-out;
+    transition: all 0.080s ease-out;
+}
+.opened .opt{
+	background: #787f89 url(../images/opt2.png) 7px 10px no-repeat;
+	right: -27px;
+}
+.options .title{
+	font-size:16px;
+	color:white;
+	padding: 0 10px 0 16px;
+	margin:  0 0 34px;
+	font-weight:300;
+	font-family: Verdana, sans-seriv;
+}
+.options  h2{
+	font-size:12px;
+	font-weight:400;
+	color:white;
+	padding: 0  16px;
+	margin: 0 0 14px;
+	font-family: Verdana, sans-seriv;
+}
+.opt-item{
+	margin: 0 0 21px;
+}
+.opt-check{
+	width:133px;
+	margin: 0 auto 7px;
+	position:relative;
+}
+.opt-check input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+.opt-check>a{
+	  display: block;
+  font-size: 11px;
+  padding: 5px 8px;
+  text-align: center;
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  width: 130px;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 13px;
+  box-sizing:border-box;
+  background-clip: padding-box;
+}
+.opt-check>a:hover, .opt-check>a.active{
+	color: #464e59;
+  background-color: white;
+}
+.opt-check input[type="radio"] + label {	
+	display: block;
+	font-size: 11px; 
+	padding: 5px 8px;
+	text-align:center;  
+	color:white;
+	vertical-align:middle;
+	cursor: pointer;
+	position:relative;
+	width:130px;
+
+	color:white;
+	border: 1px solid #fff;
+	border-radius: 13px;
+	box-sizing:border-box;
+	background-clip: padding-box;
+	font-family: Verdana, sans-seriv;
+}
+.opt-check input[type="radio"]:checked + label{
+	background:white;
+}
+.opt-check input[type="radio"] + label:hover, .opt-check input[type="radio"]:checked + label{
+	color:#464e59;
+	background-color: white;
+}
+.color-cha{
+	font-size:0;
+	  
+	padding: 0 16px;
+	margin: 0 0  -17px;
+}
+.opt2-check{
+	width: 28px;
+	margin: 0 14px 17px 0;
+	display:inline-block;
+	position:relative;
+}
+.opt2-check input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+.opt2-check input[type="radio"] + label,  .opt2-check  a{	
+	display: block;
+	padding: 0;
+	width: 28px;
+	height: 28px;
+	border-radius:50%;
+	vertical-align:middle;
+	cursor: pointer;
+	position:relative;
+	border:2px solid #39414c;
+	box-sizing: border-box;
+}
+.opt2-check input[type="radio"] + label:hover, .opt2-check input[type="radio"]:checked + label, .opt2-check a.active{
+	border:2px solid #fff;
+}
+.sub-opt{
+	width:130px;
+	height: 34px;
+	display: block;
+	cursor:pointer;
+	margin: 17px auto 0;
+	font-size: 16px;
+	color:white;
+	background:none;
+	border: 1px solid #fff;
+	border-radius: 17px;
+	box-sizing:border-box;
+	background-clip: padding-box;
+}
+.sub-opt:hover{
+	background:white;
+	color:#464e59;
+}

@@ -87,14 +87,6 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/37082475" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<!-- Онлайн чат корпоративного портала -->
-<script data-skip-moving="true">
-        (function(w,d,u,b){
-                s=d.createElement('script');r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
-                h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://bpm.ucre.ru/upload/crm/e3d/e3dc7a1d1681e52b926ee1f993b28f04.js');
-</script>
-<!-- Онлайн чат корпоративного портала -->
 <link rel="stylesheet" href="https://cdn.callbackkiller.com/widget/cbk.css">
 <script type="text/javascript" src="https://cdn.callbackkiller.com/widget/cbk.js?wcb_code=6d2c8fa41f50f9ec01177bb28c659612" charset="UTF-8" async></script>
 <!-- Rating@Mail.ru counter -->
@@ -112,6 +104,13 @@
 <img src="//top-fwz1.mail.ru/counter?id=2889161;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
-
+<!-- Открытые линии -->
+<script data-skip-moving="true">
+        (function(w,d,u,b){
+               s=d.createElement('script');r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
+               h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+       })(window,document,'https://bpm.ucre.ru/upload/crm/255/25536248689294b267aea6a03345fd35.js');
+</script>
+<!-- Открытые линии -->
 </body>
 </html>

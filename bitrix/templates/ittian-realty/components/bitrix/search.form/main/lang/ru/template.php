@@ -1,0 +1,3 @@
+<?
+$MESS['FORMSEARCH_PLACEHOLDER'] = "Поиск";
+?>
