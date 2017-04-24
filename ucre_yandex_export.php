@@ -26,7 +26,7 @@ $dom = new domDocument("1.0", "utf-8"); // Создаём XML-документ �
 						$cat = $temp[1];
 				}
 				$arProps = $ob->GetProperties();
-        echo $arFields['ID']." ".$arFields['NAME']." ".$arFields['DATE_ACTIVE_FROM']." ".$arProps['STAFF']['VALUE']."<br>";
+        //echo $arFields['ID']." ".$arFields['NAME']." ".$arFields['DATE_ACTIVE_FROM']." ".$arProps['STAFF']['VALUE']."<br>";
         if ($arProps['STAFF']['VALUE'] >0) {
 					//----------------Поиск данных агента----------
 					$agentSort = Array("ID"=>"ASC");
