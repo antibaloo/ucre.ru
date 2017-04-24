@@ -25,17 +25,25 @@ $dom = new domDocument("1.0", "utf-8"); // Создаём XML-документ �
 					default:
 						$cat = $temp[1];
 				}
-        //echo $arFields['ID']." ".$arFields['NAME']." ".$arFields['DATE_ACTIVE_FROM']." ".$arFields['IBLOCK_SECTION_ID']." ";
-        $arProps = $ob->GetProperties();
-        //----------------Поиск данных агента----------
-        $agentSort = Array("ID"=>"ASC");
-        $agentSelect = Array("ID","IBLOCK_ID", "NAME", "PROPERTY_*");
-        $agentFilter = Array("IBLOCK_ID" => 13, "ID"=>$arProps['STAFF']['VALUE']);
-        $ares = CIBlockElement::GetList($agentSort, $agentFilter, false, false, $agentSelect);
-        $agent = $ares->GetNextElement();
-        $agentFields = $agent->GetFields();
-        $agentProps = $agent->GetProperties();
-        //---------------------------------------------
+				$arProps = $ob->GetProperties();
+        echo $arFields['ID']." ".$arFields['NAME']." ".$arFields['DATE_ACTIVE_FROM']." ".$arProps['STAFF']['VALUE']."<br>";
+        if ($arProps['STAFF']['VALUE'] >0) {
+					//----------------Поиск данных агента----------
+					$agentSort = Array("ID"=>"ASC");
+					$agentSelect = Array("ID","IBLOCK_ID", "NAME", "PROPERTY_*");
+					$agentFilter = Array("IBLOCK_ID" => 13, "ID"=>$arProps['STAFF']['VALUE']);
+					$ares = CIBlockElement::GetList($agentSort, $agentFilter, false, false, $agentSelect);
+					$agent = $ares->GetNextElement();
+					$agentFields = $agent->GetFields();
+					$agentProps = $agent->GetProperties();
+					//---------------------------------------------
+				}else {
+					$agentFields['ID'] = "#";
+					$agentFields['NAME'] = "Дежурный клиент-менеджер";
+					$agentProps['PHONE']['VALUE'] = "+7(922)829-90-57";
+					$agentProps['EMAIL']['VALUE'] = "info@ucre.ru";
+					$agentProps['PHOTO_LINK']['VALUE'] = "http://ucre.ru/bitrix/templates/ittian-realty/assets/images/stub-staff.jpg";
+				}
         if ($arFields['IBLOCK_SECTION_ID']=='23' || $arFields['IBLOCK_SECTION_ID']=='21'){continue;}
         
         $offer = $dom->createElement("offer"); // Создаём узел "Object"
