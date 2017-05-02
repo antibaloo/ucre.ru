@@ -17,9 +17,9 @@
             $this->AddDeleteAction($arItem["ID"], $arItem["DELETE_LINK"], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage("CT_BNL_ELEMENT_DELETE_CONFIRM")));
             ?>
             <div  class="sot-item col-lg-3  col-md-4 col-sm-6" id="<?=$this->GetEditAreaId($arItem["ID"])?>">
-                <a  href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="img">
+                <a  href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="img" style="padding-left: 5%;padding-right: 5%;">
                     <?if($arItem['PROPERTIES']['PHOTO_LINK']['VALUE']){?>
-                        <img width="374" height="auto" src="<?=$arItem['PROPERTIES']['PHOTO_LINK']['VALUE']?>">
+                        <img src="<?=$arItem['PROPERTIES']['PHOTO_LINK']['VALUE']?>">
                     <?}else{?>
                         <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/stub-staff.jpg">
                     <?}?>
