@@ -34,7 +34,7 @@
                     <div class="sot-phone"><?=nl2br($arItem['PROPERTIES']['PHONE']['VALUE'])?></div>
                     <a href="mailto:<?=trim($arItem['PROPERTIES']['EMAIL']['VALUE'])?>"><?=$arItem['PROPERTIES']['EMAIL']['VALUE']?></a>
                     <?if ($arItem['IBLOCK_SECTION_ID']==18 || $arItem['IBLOCK_SECTION_ID']==42){?>
-                      <div class="sot-phone"><span style="color:black">Рейтинг сотрудника: <?=nl2br($arItem['SORT'])?></span></div>
+                      <!--<div class="sot-phone"><span style="color:black">Рейтинг сотрудника: <?=nl2br($arItem['SORT'])?></span></div>-->
                     <?}?>
                 </div>
             </div>
