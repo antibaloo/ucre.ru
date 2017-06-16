@@ -107,9 +107,9 @@
 <!-- Открытые линии -->
 <script data-skip-moving="true">
         (function(w,d,u,b){
-               s=d.createElement('script');r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
-               h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-       })(window,document,'https://bpm.ucre.ru/upload/crm/255/25536248689294b267aea6a03345fd35.js');
+                s=d.createElement('script');r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
+                h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://bpm.ucre.ru/upload/crm/site_button/loader_8_0numed.js');
 </script>
 <!-- Открытые линии -->
 </body>
