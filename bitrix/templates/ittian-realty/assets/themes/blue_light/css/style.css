@@ -1,5 +1,5 @@
 .top-head, .top-foot{
-	background:#6086be;
+	background:#1092dc;
 }
 
 .top-b.time:after{
@@ -85,7 +85,7 @@
 }
 
 .big-title a{
-	color: #3c639b;
+	color: #087cbf;
 }
 
 
@@ -93,16 +93,16 @@
 .slider .button.destr:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active,
 .bx-wrapper .bx-pager.bx-default-pager a:hover{
-	background:#3c639b;
-	border: 2px solid #3c639b;
+	background:#087cbf;
+	border: 2px solid #087cbf;
 }
 
 .button:hover, 
 .content .left a.button:hover, 
 .slider .button.destr{
 	background:transparent;
-	color:#3c639b;
-	border: 2px solid #3c639b;
+	color:#3087cbf;
+	border: 2px solid #087cbf;
 }
 
 .content a.button.gr, .content .button.gr {
@@ -125,7 +125,7 @@ footer,
 .right-menu>ul>li.active>a:after, 
 .right-menu>ul>li.opened>a:after,
 .noUi-handle:after{
-	background:#3c639b;
+	background:#087cbf;
 }
 
 .usl-item:after,
@@ -133,7 +133,7 @@ footer,
 .right-menu>ul>li>a>span,
 .breadcrumb li a,
 .content .cont-item a.title{
-	border-color: #3c639b;
+	border-color: #087cbf;
 }
 .t-nav>li:hover>a, 
 .t-nav>div>li:hover>a, 
@@ -178,7 +178,7 @@ a.sub-but,
 .content .sot-item .title:hover, 
 .opened .alb-item .middle div,
 .content .cont-item a.title:hover{
-	color:#3c639b!important;
+	color:#087cbf!important;
 }
 
 .content  .left .new-big-thumbs a{
@@ -187,10 +187,9 @@ a.sub-but,
 
 .content .left a, 
 .about a{
-	color:#3c639b;
+	color:#087cbf;
 }
 
 .cr-wr .roub svg{
-	fill:#3c639b;
+	fill:#087cbf;
 }
-
