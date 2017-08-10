@@ -11,9 +11,6 @@ if($input){
     'PARAM4'    =>  str_replace("send", "recieve", $request->PARAM4)
   );
   echo json_encode($data);
-  $log_request = fopen('request.log', 'a');
-  fwrite( $log_request, $json ."\r\n");
-  fclose( $log_request );
 } else{
   header( 'Location: http://ucre.ru/404.php' );
 }
