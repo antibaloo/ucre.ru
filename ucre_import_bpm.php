@@ -101,7 +101,7 @@ if(CModule::IncludeModule('iblock')) {
     if ($uRes = $user_res->GetNext()){
       $prop[50] =$uRes['ID'];
     } else{
-      $prop[50] = 2732;
+      $prop[50] = '';
     }
     /*-----------------------*/
 
@@ -118,16 +118,18 @@ if(CModule::IncludeModule('iblock')) {
     $prop[89] = $mds;
     
     $arFields['PROPERTY_VALUES'] = $prop;
-    $arSelect = Array("ID", "IBLOCK_ID", "CODE");
+    $arSelect = Array("ID", "IBLOCK_ID","IBLOCK_SECTION_ID", "CODE");
     $iblock_filter = array ("IBLOCK_ID" => 14, "CODE"=>$ro->ID);
     $db_res = CIBlockElement::GetList(array("ID" => "DESC"), $iblock_filter, false, false, $arSelect);//Проверяем, есть ли на сайте объект с CODE = id объекта с портала
     $object = new CIBlockElement;
     if($aRes = $db_res->GetNext()){//Есть такой объект - обновляем
       echo "Обновляем объект ".$aRes['ID']." следующими данными:";
       print_r($arFields);
+      
       echo "<br>";
       if ($object->Update($aRes['ID'], $arFields)){
         $update++;
+        //file_get_contents('https://bpm.ucre.ru/pub/ro.php?id='.$ro->ID.'&link=http://ucre.ru/catalog//'.$aRes['ID'].'/');
       } else {
         $error_update++;
       }
