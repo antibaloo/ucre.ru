@@ -27,9 +27,11 @@ $context  = stream_context_create($options);
 $result = file_get_contents( $url, false, $context );
 $response = json_decode( $result );
 ?>
+Запрос:
 <pre>
 <?print_r($data)?>
 </pre>
+Ответ:
 <pre>
 <?print_r($response)?>
 </pre>
