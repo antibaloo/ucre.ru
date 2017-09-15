@@ -1,11 +1,10 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?$this->setFrameMode(true);?>
 <?ob_start();?>
-<? //echo '<pre>';print_r($arResult);echo '</pre>';?>
+<? //echo '<pre>'; print_r($arResult);echo '</pre>';?>
 <?
 $arItem = $arResult;
 ?>
-
 <div class="top-card">
     <div class="left-card">
         <div class="tovsl-wrap">
@@ -174,8 +173,7 @@ $arItem = $arResult;
                     <div class="tb-wr">
                         <div class="tb-row">
                             <a href="<?=$arResult['STAFF']['DETAIL_PAGE_URL']?>" class="title"><?=$arResult['STAFF']['NAME']?></a>
-                            <div class="ph"><?=nl2br($arResult['STAFF']['PROPERTY_PHONE_VALUE'])?></div>
-                            <div class="sot-mail"><a href="mailto:<?=$arResult['STAFF']['PROPERTY_EMAIL_VALUE']?>"><?=$arResult['STAFF']['PROPERTY_EMAIL_VALUE']?></a></div>
+                            <div class="ph">+7(932) 536-01-57</div>
                         </div>
                     </div>
                 </div>
