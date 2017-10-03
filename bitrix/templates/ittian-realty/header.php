@@ -37,7 +37,7 @@
     <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/assets/js/selectize.js")?>
     <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/assets/js/jquery.inputmask.bundle.min.js")?>
     <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/assets/js/action.js")?>
-
+		
     <?CJSCore::Init(array('ls'))?>
     <?$APPLICATION->ShowHead()?>
 
