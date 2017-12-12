@@ -173,7 +173,7 @@ $arItem = $arResult;
                     <div class="tb-wr">
                         <div class="tb-row">
                             <a href="<?=$arResult['STAFF']['DETAIL_PAGE_URL']?>" class="title"><?=$arResult['STAFF']['NAME']?></a>
-                            <div class="ph">+7(932) 536-01-57</div>
+                            <div class="ph">+7(922) 829-90-57</div>
                         </div>
                     </div>
                 </div>
