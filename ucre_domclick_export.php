@@ -11,57 +11,32 @@ $dom = new domDocument("1.0", "utf-8"); // Создаём XML-документ �
   if(CModule::IncludeModule('iblock')) {
       $arSort= Array("ID"=>"ASC");
       $arSelect = Array("ID","IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM","DETAIL_PICTURE", "DETAIL_TEXT", "IBLOCK_SECTION_ID","PROPERTY_*");
-      $arFilter = Array("IBLOCK_ID" => 14, "ACTIVE"=>"Y");
+      $arFilter = Array("IBLOCK_ID" => 14, "ACTIVE"=>"Y","IBLOCK_SECTION_ID" => 20);
       $res =  CIBlockElement::GetList($arSort, $arFilter, false, false, $arSelect);
       while($ob = $res->GetNextElement()){
         $arFields = $ob->GetFields();
         $temp = explode (" ",$arFields['NAME']);
-				switch ($temp[0]){
-					case 'Комната':
-					case 'Дача'		:
-					case 'Участок':
-						$cat = strtolower($temp[0]);
-						break;
-					default:
-						$cat = $temp[1];
-				}
+				if ($temp[0] == 'Комната') continue;
+				else $cat = 'квартира';
 				$arProps = $ob->GetProperties();
 				$agentFields['ID'] = "#";
 				$agentFields['NAME'] = "Дежурный клиент-менеджер";
 				$agentProps['PHONE']['VALUE'] = "+7(932)536-01-57";
 				$agentProps['EMAIL']['VALUE'] = "info@ucre.ru";
 				
-        if ($arFields['IBLOCK_SECTION_ID']=='23' || $arFields['IBLOCK_SECTION_ID']=='21'){continue;}
         
         $offer = $dom->createElement("offer"); // Создаём узел "Object"
         $offer->setAttribute("internal-id",$arFields['ID']);
         $type = $dom->createElement("type",$arProps['TYPE']['VALUE']); // Создаём узел "type" с текстом внутри
         $offer->appendChild($type);// Добавляем в узел "offer" узел "type"
         
-        switch ($arFields['IBLOCK_SECTION_ID']){
-          case 20:
-          case 22:
-          case 24:
-            $property_type = $dom->createElement("property-type","жилая");
-            break;
-        }
+				$property_type = $dom->createElement("property-type","жилая");
         $offer->appendChild($property_type);
         
         $category = $dom->createElement("category",$cat);
         $offer->appendChild($category);
         
-        $link = "http://ucre.ru/catalog/";
-        switch ($arFields['IBLOCK_SECTION_ID']){
-          case 20:
-            $link .= "residential-property/";
-            break;
-          case 22:
-            $link .= "new-buildings/";
-            break;
-          case 24:
-            $link .= "rural-property/";
-            break;
-        }
+        $link = "http://ucre.ru/catalog/residential-property/";
         
         $url = $dom->createElement("url",$link.$arFields['ID']);
         $offer->appendChild($url);
