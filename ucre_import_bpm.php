@@ -122,6 +122,13 @@ if(CModule::IncludeModule('iblock')) {
     $iblock_filter = array ("IBLOCK_ID" => 14, "CODE"=>$ro->ID);
     $db_res = CIBlockElement::GetList(array("ID" => "DESC"), $iblock_filter, false, false, $arSelect);//Проверяем, есть ли на сайте объект с CODE = id объекта с портала
     $object = new CIBlockElement;
+    $catalog = array(
+      '20' => 'residential-property',
+      '21'=> 'complex',
+      '22' => 'new-buildings',
+      '23' => 'commercial-property',
+      '24' => 'rural-property',
+    );
     if($aRes = $db_res->GetNext()){//Есть такой объект - обновляем
       echo "Обновляем объект ".$aRes['ID']." следующими данными:";
       print_r($arFields);
@@ -129,7 +136,7 @@ if(CModule::IncludeModule('iblock')) {
       echo "<br>";
       if ($object->Update($aRes['ID'], $arFields)){
         $update++;
-        //file_get_contents('https://bpm.ucre.ru/pub/ro.php?id='.$ro->ID.'&link=http://ucre.ru/catalog//'.$aRes['ID'].'/');
+        file_get_contents('https://bpm.ucre.ru/pub/ro.php?id='.$ro->ID.'&link=http://ucre.ru/catalog/'.$catalog[$aRes['IBLOCK_SECTION_ID']].'/'.$aRes['ID'].'/');
       } else {
         $error_update++;
       }
@@ -153,8 +160,9 @@ if(CModule::IncludeModule('iblock')) {
             break;
         }
       }
-      if ($object->Add($arFields)){
+      if ($NEW_ID = $object->Add($arFields)){
         $new++;
+        file_get_contents('https://bpm.ucre.ru/pub/ro.php?id='.$ro->ID.'&link=http://ucre.ru/catalog/'.$catalog[$arFields['IBLOCK_SECTION_ID']].'/'.$NEW_ID.'/');
       } else {
         $error_add++;
       }
